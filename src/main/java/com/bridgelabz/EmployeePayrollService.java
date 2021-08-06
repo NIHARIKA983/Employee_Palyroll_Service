@@ -51,4 +51,10 @@ public class EmployeePayrollService {
         if(ioService.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();
     }
+
+    public void readDataFromFile(IOService ioService){
+        if(ioService.equals(IOService.CONSOLE_IO)){
+            new EmployeePayrollFileIOService().readDataFromFile();
+        }
+    }
 }

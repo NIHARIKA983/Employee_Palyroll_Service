@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-06T14:55:58" hostname="NIHARIKA" time="0.493">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-06T15:19:31" hostname="NIHARIKA" time="0.103">
   <properties/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldPrintEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.488"/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.004"/>
+  <testcase name="givenFile_onReadingFromFile_shouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.054"/>
+  <testcase name="given3Employees_WhenWrittenToFile_ShouldPrintEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.044"/>
+  <testcase name="given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.003"/>
   <system-out><![CDATA[EmployeePayrollData{id=1, name='Jeff Bezos', salary=100000.0}
 EmployeePayrollData{id=2, name='Bill Gates', salary=200000.0}
 EmployeePayrollData{id=3, name='Mark Zuckerberg', salary=300000.0}
