@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-06T15:19:31" hostname="NIHARIKA" time="0.103">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-15T18:06:53" hostname="NIHARIKA" time="1.453">
   <properties/>
-  <testcase name="givenFile_onReadingFromFile_shouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.054"/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldPrintEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.044"/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.003"/>
-  <system-out><![CDATA[EmployeePayrollData{id=1, name='Jeff Bezos', salary=100000.0}
-EmployeePayrollData{id=2, name='Bill Gates', salary=200000.0}
-EmployeePayrollData{id=3, name='Mark Zuckerberg', salary=300000.0}
+  <testcase name="givenFile_OnReadingFromFile_ShouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.131"/>
+  <testcase name="givenEmployeePayrollInDB_WhenRetrieved_ShouldMatch_EmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.209"/>
+  <testcase name="given3Employees_WhenWrittenToFile_ShouldPrintEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.106"/>
+  <testcase name="given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.005"/>
+  <system-out><![CDATA[EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
+EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
+EmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
+Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@67d7c53b
+EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
+EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
+EmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

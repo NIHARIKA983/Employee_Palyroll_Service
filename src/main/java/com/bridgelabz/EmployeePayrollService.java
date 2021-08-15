@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,24 +12,29 @@ public class EmployeePayrollService {
     public EmployeePayrollService(List<EmployeePayrollData> employeePayrollDataList){
         this.employeePayrollDataList = employeePayrollDataList;
     }
-
-    public static void main(String[] args) {
-        ArrayList<EmployeePayrollData> employeePayrollList = new ArrayList<EmployeePayrollData>();
-        EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollList);
-        Scanner consoleInputReader = new Scanner(System.in);
-        employeePayrollService.readEmployeePayrollData(consoleInputReader);
-        employeePayrollService.writeEmployeePayrollData(IOService.FILE_IO);
-    }
     //method to read data
-    private void readEmployeePayrollData(Scanner consoleInputReader) {
-        System.out.println("Enter Employee Id:");
-        int id=consoleInputReader.nextInt();
-        System.out.println("Enter Employee name:");
-        consoleInputReader.nextLine();
-        String name=consoleInputReader.nextLine();
-        System.out.println("Enter Employee salary:");
-        double salary=consoleInputReader.nextInt();
-        employeePayrollDataList.add(new EmployeePayrollData(id,name,salary));
+    public List readEmployeePayrollData(IOService ioService) throws PayrollDatabaseException {
+        if(ioService.equals(IOService.CONSOLE_IO)) {
+            Scanner consoleInputReader = new Scanner(System.in);
+            System.out.println("Enter Employee Id:");
+            int id=consoleInputReader.nextInt();
+            System.out.println("Enter Employee name:");
+            consoleInputReader.nextLine();
+            String name=consoleInputReader.nextLine();
+            System.out.println("Enter Employee salary:");
+            double salary=consoleInputReader.nextInt();
+            employeePayrollDataList.add(new EmployeePayrollData(id,name,salary));
+        }
+        List<String> employeeList = null;
+        if(ioService.equals(IOService.FILE_IO)) {
+            employeeList = new EmployeePayrollFileIOService().readData();
+            return employeeList;
+        }
+        if(ioService.equals(IOService.DB_IO)) {
+            this.employeePayrollDataList = new EmployeePayrollDBService().readData();
+            return employeePayrollDataList;
+        }
+        return null;
     }
     //method to write data on console
     public void writeEmployeePayrollData(IOService ioService) {
@@ -50,11 +54,5 @@ public class EmployeePayrollService {
     public void printData(IOService ioService){
         if(ioService.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();
-    }
-
-    public void readDataFromFile(IOService ioService){
-        if(ioService.equals(IOService.CONSOLE_IO)){
-            new EmployeePayrollFileIOService().readDataFromFile();
-        }
     }
 }

@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class EmployeePayrollServiceTest {
 
@@ -37,10 +38,20 @@ public class EmployeePayrollServiceTest {
     }
 
     @Test
-    public void givenFile_onReadingFromFile_shouldMatchEmployeeCount() {
+    public void givenFile_OnReadingFromFile_ShouldMatchEmployeeCount() throws PayrollDatabaseException {
+        EmployeePayrollService employeePayrollService  = new EmployeePayrollService();
+        List<EmployeePayrollData> employeePayrollDataList = employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.FILE_IO);
+        Assert.assertEquals(3,employeePayrollDataList.size());
+    }
+
+    @Test
+    public void givenEmployeePayrollInDB_WhenRetrieved_ShouldMatch_EmployeeCount(){
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
-        employeePayrollService.readDataFromFile(EmployeePayrollService.IOService.FILE_IO);
-        long entries = employeePayrollService.count(EmployeePayrollService.IOService.FILE_IO);
-        Assert.assertEquals(3, entries);
+        try {
+            List<EmployeePayrollData> employeePayrollDataList = employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
+            Assert.assertEquals(3, employeePayrollDataList.size());
+        }catch (PayrollDatabaseException e){
+            e.printStackTrace();
+        }
     }
 }

@@ -1,14 +1,15 @@
 package com.bridgelabz;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
-import java.io.File;
 
 public class EmployeePayrollFileIOService {
     public static String PAYROLL_FILE_NAME = "payroll-file.txt";
-
+    //method to write Employee Data to a File
     public void writeData(List<EmployeePayrollData> employeePayrollDataList) {
         StringBuffer empBuffer = new StringBuffer();
         employeePayrollDataList.forEach(employee-> {
@@ -40,12 +41,19 @@ public class EmployeePayrollFileIOService {
             e.printStackTrace();
         }
     }
-
-    public void readDataFromFile(){
+    //method to read employee data from file,store it in list and return list
+    public List<String> readData(){
+        List<String> employeeList = new ArrayList<>();
         try {
-            Files.lines(new File(PAYROLL_FILE_NAME).toPath()).map(line -> line.trim()).forEach(line -> System.out.println(line));
-        } catch (IOException exception) {
-            exception.printStackTrace();
+            Files.lines(new File(PAYROLL_FILE_NAME).toPath()).map(line -> line.trim())
+                    .forEach(line -> {
+                        employeeList.add(line);
+                        System.out.println(line);
+
+                    });
+        }catch (IOException e){
+            e.printStackTrace();
         }
+        return employeeList;
     }
 }
