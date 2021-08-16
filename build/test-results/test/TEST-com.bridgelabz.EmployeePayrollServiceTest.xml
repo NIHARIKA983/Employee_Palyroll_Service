@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-16T07:04:30" hostname="NIHARIKA" time="14.778">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-16T12:50:28" hostname="NIHARIKA" time="2.474">
   <properties/>
-  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDatabase" classname="com.bridgelabz.EmployeePayrollServiceTest" time="14.778"/>
+  <testcase name="givenNewSalaryForEmployee_WhenUpdatedUsing_PreparedStatement_ShouldSyncWithDatabase" classname="com.bridgelabz.EmployeePayrollServiceTest" time="2.474"/>
   <system-out><![CDATA[Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@6db9a955
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b791bc6
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@2f2261bb
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@5d2637cd
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
