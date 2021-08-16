@@ -1,8 +1,6 @@
-<EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
-<EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
-AEmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
-QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@67d7c53b
-<EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
-<EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
-AEmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
+QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@6db9a955
+QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b791bc6
+QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@2f2261bb

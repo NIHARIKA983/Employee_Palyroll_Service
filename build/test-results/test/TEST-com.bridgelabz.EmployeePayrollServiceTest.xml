@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-15T18:06:53" hostname="NIHARIKA" time="1.453">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-16T07:04:30" hostname="NIHARIKA" time="14.778">
   <properties/>
-  <testcase name="givenFile_OnReadingFromFile_ShouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.131"/>
-  <testcase name="givenEmployeePayrollInDB_WhenRetrieved_ShouldMatch_EmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.209"/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldPrintEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.106"/>
-  <testcase name="given3Employees_WhenWrittenToFile_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.005"/>
-  <system-out><![CDATA[EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
-EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
-EmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
+  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDatabase" classname="com.bridgelabz.EmployeePayrollServiceTest" time="14.778"/>
+  <system-out><![CDATA[Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@6db9a955
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@67d7c53b
-EmployeePayRollData [id=1 name=Jeff Bezos salary=100000.0]
-EmployeePayRollData [id=2 name=Bill Gates salary=200000.0]
-EmployeePayRollData [id=3 name=Mark Zuckerberg salary=300000.0]
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b791bc6
+Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@2f2261bb
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
