@@ -2,5 +2,3 @@
 FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@6db9a955
 QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
 FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b791bc6
-QConnecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-FConnection is successful!! com.mysql.cj.jdbc.ConnectionImpl@67545565
