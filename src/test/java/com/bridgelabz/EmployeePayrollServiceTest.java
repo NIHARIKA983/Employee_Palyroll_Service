@@ -113,4 +113,17 @@ public class EmployeePayrollServiceTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenNewEmployee_WhenAdded_ShouldSyncWithDB(){
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        try {
+            employeePayrollService.readEmployeePayrollData(DB_IO);
+            Map<String,Double> averageSalaryByGender = employeePayrollService.readAverageSalaryByGender(DB_IO);
+            employeePayrollService.addEmployeeToPayroll("Mark","M",400000.00,LocalDate.now());
+            boolean result = employeePayrollService.checkEmployeePayrollInSyncWithDB("Mark");
+        }catch (PayrollDatabaseException e){
+            e.printStackTrace();
+        }
+    }
 }
