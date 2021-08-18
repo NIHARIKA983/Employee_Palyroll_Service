@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-17T14:38:55" hostname="NIHARIKA" time="1.656">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-18T10:35:47" hostname="NIHARIKA" time="3.629">
   <properties/>
-  <testcase name="givenNewEmployee_WhenAdded_ShouldSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.656"/>
+  <testcase name="givenNewEmployee_WhenAdded_ShouldSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="3.629"/>
   <system-out><![CDATA[Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@6db9a955
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@3b6b9dc4
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b791bc6
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7b1ca9f2
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@5dca4f8d
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@4632198
 Connecting to database jdbc:mysql://localhost:3306/payroll_service?useSSL=false
-Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@7d6af6df
+Connection is successful!! com.mysql.cj.jdbc.ConnectionImpl@1b6e9df4
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
